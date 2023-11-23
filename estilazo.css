@@ -1,0 +1,361 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome|typicons);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+/**<ALL>**/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Open Sans', sans-serif;
+  }
+
+/**<MENU>**/
+  nav{
+    background: #333;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+	  top: 0;
+	  left: 0;
+	  z-index: 100;
+  }
+  label.logo{
+    color: white;
+    font-size: 32px;
+    line-height: 80px;
+    padding: 40px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #777777;
+    transition: .5s;
+    border-radius: 12%;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #333;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: #777777;
+      color: white;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+/**</MENU>**/
+
+/**<BODY>**/
+.contenedor {
+	width: 98%;
+	margin: auto;
+}
+
+h1 {
+	float: left;
+    font-size: 34px;
+}
+
+section {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+#bienvenidos {
+	text-align: center;
+}
+
+footer .contenedor {
+	width: 100%;
+	height: 50px;
+	background: #333;
+	color: #fff;
+	justify-content: center;
+	padding-bottom: 25px;
+	text-align: center;
+}
+
+.copy {
+	font-size: 34px;
+}
+
+.sociales {
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+}
+
+.sociales a {
+	color: #333;
+	text-decoration: none;
+}
+
+@media (min-width: 952px) { 
+	.sociales {
+		width: auto;
+	}
+	
+	footer .contenedor {
+		justify-content: space-between;
+	}
+}
+
+
+@media (min-width: 858px) {
+	.contenedor {
+		width: 1000px;
+	}
+}
+
+#blog h3, h4 {
+	text-align: center;
+}
+
+#blog .contenedor{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#blog article {
+	margin: 15px;
+}
+
+#blog img {
+	width: 125%;
+	max-width: 260px;
+    border-radius: 70px;
+}
+
+#banner {
+	margin-top: 50px;
+	position: relative;
+}
+
+#banner img {
+	width: 100%;
+	height: 100%;
+}
+
+#banner .contenedor {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	color: #fff;
+}
+
+#banner h2 {
+	font-size: 28px;
+}
+
+#banner a {
+	display: block;
+	width: 100px;
+	color: #fff;
+	text-decoration: none;
+	padding: 7px;
+	margin-top: 10px;
+	border: 2px solid #fff;
+}
+
+#banner a:hover {
+	background: rgba(51,51,51,0.5);
+}
+
+@media (min-width:400px) {
+
+	#banner img {
+		height: 300px;
+		margin-top: 0px;
+	}
+	#banner h2 {
+    margin-top: 0%;
+		font-size: 26px;
+	}
+	
+	#banner a {
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: 700px) { 
+	#banner {
+		height: 300px;
+		overflow: hidden;
+	}
+	
+	#banner img {
+		height: 300PX;
+		margin-top: 0px;
+	}
+}
+
+@media (min-width:1024px) { 
+	#banner img {
+		margin-top: 0px;
+	}
+  #banner h2 {
+    margin-top: 0%;
+		font-size: 40px;
+	}
+}
+
+#info {
+	background: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+#info .contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.info-pet {
+	margin: 10px;
+}
+.info-pet img {
+	width: 110px;
+	height: 110px;
+	border-radius: 20%;
+}
+
+@media (min-width:480px) {
+	.info-pet {
+		width: 40%;
+	}
+}
+
+@media (min-width:1024px) {
+	.info-pet {
+		width: auto;
+	}
+}
+/**</BODY>**/
+
+/**<FORM>**/
+html {
+	scroll-behavior: smooth;
+  }
+
+form {
+  background-color: #fff;
+	width: 98%;
+	padding: 15px;
+	margin: auto;
+  border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+background-color: #333;
+color: #fff;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+/**</FORM>**/
+
+/**<CONTAINER>**/
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Estilos para la columna de texto */
+.text-column {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Estilos para la columna de imagen */
+.image-column {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Estilos adicionales para la imagen */
+.image-column img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
